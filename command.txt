@@ -1,0 +1,2 @@
+cobra-cli init
+cobra-cli add <name>

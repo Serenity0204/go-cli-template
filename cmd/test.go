@@ -1,17 +1,26 @@
+/*
+Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+*/
 package cmd
 
 import (
-	"fmt"
+	"go-cli-template/helper"
+
 	"github.com/spf13/cobra"
 )
 
+// testCmd represents the test command
 var testCmd = &cobra.Command{
-	Use:     "test",
-	Aliases: []string{"test"},
-	Short:   "test a command",
-	Args:    cobra.ExactArgs(1),
+	Use:   "test",
+	Short: "A brief description of your command",
+	Long: `A longer description that spans multiple lines and likely contains examples
+and usage of using your command. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("A command for testing, the stuff you typed: ", args[0])
+		helper.Hello()
 	},
 }
 
