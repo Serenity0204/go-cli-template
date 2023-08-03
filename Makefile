@@ -1,14 +1,16 @@
-.PHONY: build run
+.PHONY: build test clean dump
 
 build:
-	go build -o build main.go
+	go build
 
-# ## without argument
-# run:
-# 	./build
+test:
+	go test -v
 
-## with argument
-run:
-	./build $(filter-out $@,$(MAKECMDGOALS))
-%:
-	@:
+ifeq ($(OS),Windows_NT)
+clean:
+	del /f ProjectName.exe
+else
+clean:
+	rm -f ProjectName
+endif
+	

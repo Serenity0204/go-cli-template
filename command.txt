@@ -1,3 +1,22 @@
 go mod init github.com/<username>/<reponame>
-cobra-cli init
-cobra-cli add <name>
+go mod tidy
+
+// for cobra
+    cobra-cli init
+    cobra-cli add <name>
+
+// makefile
+    make build
+    make test
+    make test
+
+// install
+    go install 
+
+// uninstall
+    windows: del %GOPATH%\bin\ProjectName.exe
+    linux/macOS: rm $GOPATH/bin/ProjectName
+
+ASCII art:
+https://textfancy.com/text-art/
+https://www.asciiart.eu/
