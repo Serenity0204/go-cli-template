@@ -1,4 +1,4 @@
-.PHONY: build test clean dump
+.PHONY: build test clean
 
 build:
 	go build
